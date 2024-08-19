@@ -1,0 +1,442 @@
+[
+  {
+    "sound": "A_2.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "A_2s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "B_2.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "C_1.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "C_1s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "D_1.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "D_1s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "E_1.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "F_1.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "F_1s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "G_1.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "G_1s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "A_1.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "A_1s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "B_1.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "C.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "Cs.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "D.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "Ds.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "E.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "F.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "Fs.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "G.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "Gs.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "A.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "As.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "B.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "cc.mp3",
+    "key": "z",
+    "text": ""
+  },
+  {
+    "sound": "ccs.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "dd.mp3",
+    "key": "x",
+    "text": ""
+  },
+  {
+    "sound": "dds.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "ee.mp3",
+    "key": "c",
+    "text": ""
+  },
+  {
+    "sound": "ff.mp3",
+    "key": "v",
+    "text": ""
+  },
+  {
+    "sound": "ffs.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "gg.mp3",
+    "key": "b",
+    "text": ""
+  },
+  {
+    "sound": "ggs.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "aa.mp3",
+    "key": "n",
+    "text": ""
+  },
+  {
+    "sound": "aas.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "bb.mp3",
+    "key": "m",
+    "text": ""
+  },
+  {
+    "sound": "c1.mp3",
+    "key": "g",
+    "text": ""
+  },
+  {
+    "sound": "c1s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "d1.mp3",
+    "key": "h",
+    "text": ""
+  },
+  {
+    "sound": "d1s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "e1.mp3",
+    "key": "j",
+    "text": ""
+  },
+  {
+    "sound": "f1.mp3",
+    "key": "k",
+    "text": ""
+  },
+  {
+    "sound": "f1s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "g1.mp3",
+    "key": "l",
+    "text": ""
+  },
+  {
+    "sound": "g1s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "a1.mp3",
+    "key": ";",
+    "text": ""
+  },
+  {
+    "sound": "a1s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "b1.mp3",
+    "key": "\"",
+    "text": ""
+  },
+  {
+    "sound": "c2.mp3",
+    "key": "y",
+    "text": ""
+  },
+  {
+    "sound": "c2s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "d2.mp3",
+    "key": "u",
+    "text": ""
+  },
+  {
+    "sound": "d2s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "e2.mp3",
+    "key": "i",
+    "text": ""
+  },
+  {
+    "sound": "f2.mp3",
+    "key": "o",
+    "text": ""
+  },
+  {
+    "sound": "f2s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "g2.mp3",
+    "key": "p",
+    "text": ""
+  },
+  {
+    "sound": "g2s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "a2.mp3",
+    "key": "[",
+    "text": ""
+  },
+  {
+    "sound": "a2s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "b2.mp3",
+    "key": "]",
+    "text": ""
+  },
+  {
+    "sound": "c3.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "c3s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "d3.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "d3s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "e3.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "f3.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "f3s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "g3.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "g3s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "a3.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "a3s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "b3.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "c4.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "c4s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "d4.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "d4s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "e4.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "f4.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "f4s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "g4.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "g4s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "a4.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "a4s.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "b4.mp3",
+    "key": "",
+    "text": ""
+  },
+  {
+    "sound": "c5.mp3",
+    "key": "",
+    "text": ""
+  }
+]
