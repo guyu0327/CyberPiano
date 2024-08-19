@@ -65,7 +65,8 @@ class MainWindow(QMainWindow):
             self.buttons.append(button)
 
     # 匹配并添加label
-    def add_label(self, container, key, white_key_index, button_width, main_height):
+    @staticmethod
+    def add_label(container, key, white_key_index, button_width, main_height):
         label_map = {
             'a': '6', 'A': '6',
             'b': '7', 'B': '7',
@@ -80,7 +81,8 @@ class MainWindow(QMainWindow):
         label.move(white_key_index * button_width - button_width * 0.5, main_height - 60)
 
     # 初始化黑白键样式
-    def set_button_style(self, button, is_black_key):
+    @staticmethod
+    def set_button_style(button, is_black_key):
         if is_black_key:
             button.setStyleSheet("""
                 QPushButton {
