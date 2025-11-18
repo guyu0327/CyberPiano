@@ -2,22 +2,31 @@ import sys
 import keyboard
 import pygame
 import json
+from pathlib import Path
 
 from threading import Thread
 from PyQt5.QtWidgets import QMainWindow, QWidget, QPushButton, QApplication, QLabel
+from PyQt5.QtCore import pyqtSignal
 
 # 读取数据文件
-piano_key = json.load(open('JSON/piano_key.json', 'r', encoding='utf8'))
+BASE_DIR = Path(__file__).resolve().parent
+piano_key = json.load(open(str(BASE_DIR / 'JSON' / 'piano_key.json'), 'r', encoding='utf8'))
+sound_cache = {}
 
 
 # 主窗口
 class MainWindow(QMainWindow):
+    keyPressed = pyqtSignal(int)
+    keyReleased = pyqtSignal(int, bool)
+
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
+        self.keyPressed.connect(self.change_button_color)
+        self.keyReleased.connect(self.release_button_color)
 
         # 获取桌面尺寸
-        desktop = QApplication.desktop()
-        screen_rect = desktop.screenGeometry()
+        screen = QApplication.primaryScreen()
+        screen_rect = screen.availableGeometry()
         # 设置主窗口比例
         main_width = int(screen_rect.width() * 0.9)
         main_height = int(screen_rect.height() * 0.4)
@@ -129,7 +138,9 @@ class MainWindow(QMainWindow):
     # 鼠标点击播放
     def on_button_clicked(self):
         button = self.sender()
-        pygame.mixer.Sound('MP3/' + button.objectName()).play()
+        sound = sound_cache.get(button.objectName())
+        if sound:
+            sound.play()
 
 
 # 初始化 PyQt 应用
@@ -139,16 +150,28 @@ form = MainWindow()
 
 
 # 键盘按下触发
+def normalize_key_name(name):
+    alias = {
+        'apostrophe': '"',
+        'semicolon': ';',
+        'left bracket': '[',
+        'right bracket': ']'
+    }
+    return alias.get(name, name)
+
 def on_action(event):
     try:
-        sound = next(item['sound'] for item in piano_key if item['key'] == event.name)
-        index = next(index for index, item in enumerate(piano_key) if item['key'] == event.name)
+        key_name = normalize_key_name(event.name)
+        sound = next(item['sound'] for item in piano_key if item['key'] == key_name)
+        index = next(i for i, item in enumerate(piano_key) if item['key'] == key_name)
 
-        if event.event_type == keyboard.KEY_DOWN:
-            pygame.mixer.Sound('MP3/' + sound).play()
-            form.change_button_color(index)
-        elif event.event_type == keyboard.KEY_UP:
-            form.release_button_color(index, 's' in sound)
+        if event.event_type == 'down':
+            snd = sound_cache.get(sound)
+            if snd:
+                snd.play()
+            form.keyPressed.emit(index)
+        elif event.event_type == 'up':
+            form.keyReleased.emit(index, 's' in sound)
 
     except StopIteration:
         print(f"No sound file found for key: {event.name}")
@@ -156,8 +179,21 @@ def on_action(event):
 
 # 键盘监听
 def start_keyboard_listener():
-    keyboard.hook(on_action)
-    keyboard.wait()
+    try:
+        keyboard.hook(on_action)
+        keyboard.wait()
+    except Exception as e:
+        form.status.showMessage(f'键盘监听失败：{e}')
+
+
+def preload_sounds():
+    unique = {item['sound'] for item in piano_key}
+    for name in unique:
+        path = BASE_DIR / 'MP3' / name
+        try:
+            sound_cache[name] = pygame.mixer.Sound(str(path))
+        except Exception:
+            pass
 
 
 def main():
@@ -165,6 +201,7 @@ def main():
     form.show()
     # 初始化 Pygame 混音器
     pygame.mixer.init()
+    preload_sounds()
     # 启动键盘监听线程
     listener_thread = Thread(target=start_keyboard_listener)
     listener_thread.daemon = True
